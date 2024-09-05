@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+       <style>
+        body {
+            background-image: url('{{ url_for('static', filename='OIP.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 2;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <h1>Calculadora Financeira</h1>
+    <form action="/calcular" method="POST">
+        <label for="nome">Qual o eu nome?:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" required><br><br>
+
+        <label for="invest_inicial">Investimento Inicial:</label>
+        <input type="number" id="invest_inicial" name="invest_inicial" step="0.01" required><br><br>
+
+        <label for="invest_time">Meses de Investimento:</label>
+        <input type="number" id="invest_time" name="invest_time" required><br><br>
+
+        <label for="taxa">Taxa de Retorno Mensal (%):</label>
+        <input type="number" id="taxa" name="taxa" step="0.01" required><br><br>
+
+        <label for="aporte">Aporte Mensal:</label>
+        <input type="number" id="aporte" name="aporte" step="0.01" required><br><br>
+
+        <label for="renda_desejada">Renda Desejada na Aposentadoria:</label>
+        <input type="number" id="renda_desejada" name="renda_desejada" step="0.01" required><br><br>
+
+        <button type="submit">Calcular</button>
+
+
+</body>
+</html>
